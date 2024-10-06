@@ -8,24 +8,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://js.stripe.com/v3/"></script>
 </head>
-<body> 
-    <h1>Create Invoice</h1>
-    <form id="invoiceForm">
-        <label>Business Name: <input type="text" id="businessName" required></label><br>
-        <label>Client Name: <input type="text" id="clientName" required></label><br>
-        <label>Hourly Rate: <input type="number" id="hourlyRate" required></label><br>
-        <div id="taskList">
-            <h3>Tasks</h3>
-            <div class="task">
-                <label>Task Name: <input type="text" class="taskName" required></label>
-                <label>Hours: <input type="number" class="hours" required></label>
-                <button type="button" class="deleteTask">x</button>
+<body>
+    <div class="container">
+        <h1>Create Invoice</h1>
+        <form id="invoiceForm">
+            <label>Business Name: <input type="text" id="businessName" required></label><br>
+            <label>Client Name: <input type="text" id="clientName" required></label><br>
+            <label>Hourly Rate: <input type="number" id="hourlyRate" required></label><br>
+            <div id="taskList">
+                <h3>Tasks</h3>
+                <div class="task">
+                    <label>Task Name: <input type="text" class="taskName" required></label>
+                    <label>Hours: <input type="number" class="hours" required></label>
+                    <button type="button" class="deleteTask">x</button>
+                </div>
             </div>
-        </div>
-        <button type="button" onClick="addTask()">Add Task</button><br><br>
-        <button type="submit">Generate Invoice</button>
-    </form>
-    
+            <button type="button" onClick="addTask()">Add Task</button><br><br>
+            <button type="submit">Generate Invoice</button>
+        </form>
+    </div>
     <script src="js/script.js"></script>
 </body>
 </html>
