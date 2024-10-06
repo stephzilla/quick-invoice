@@ -1,11 +1,18 @@
 function addTask() {
     const taskDiv = document.createElement('div');
     taskDiv.classList.add('task');
+
     taskDiv.innerHTML = `
         <label>Task Name: <input type="text" class="taskName" required></label>
         <label>Hours: <input type="number" class="taskHours" required></label>
-    `;
+        <button type="button" class="deleteTask">x</button>
+        `;
     document.getElementById('taskList').appendChild(taskDiv);
+
+    //Add event listener to delete button to remove the task
+    taskDiv.querySelector('.deleteTask').addEventListener('click', () => {
+        taskDiv.remove();
+    });
 }
 
 document.getElementById('invoiceForm').addEventListener('submit', (event) => {

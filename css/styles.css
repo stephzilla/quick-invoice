@@ -50,6 +50,26 @@ input:focus {
     border-color: #007bff;
 }
 
+/* Delete button */
+.deleteTask {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 10px;
+}
+
+.deleteTask:hover {
+    background-color: #ff1a1a;
+}
+
 /* Button Styles */
 button {
     background-color: #007bff;
@@ -109,5 +129,9 @@ button[type="button"]:hover {
 
     input[type="text"], input[type="number"] {
         margin-bottom: 10px;
+    }
+
+    .deleteTask {
+        margin-top: 10px;
     }
 }
