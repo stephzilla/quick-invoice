@@ -35,7 +35,8 @@ function addTask() {
     });
   
     try {
-      const response = await fetch('/create-payment-link', {
+      const response = await fetch('http://localhost:3000/create-payment-link', {
+      // const response = await fetch('/create-payment-link', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
