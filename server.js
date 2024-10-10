@@ -17,6 +17,7 @@ app.post('/create-payment-link', async (req, res) => {
         console.log("PAYMENT LINK: " + paymentLink)
         res.json({ paymentLink });
     } catch (error) {
+        console.log("There as an error: " + error.message);
         res.status(500).json({ error: 'Failed to create payment link' });
     }
 });

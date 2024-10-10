@@ -48,7 +48,7 @@ function addTask() {
       });
   
       const data = await response.json();
-  
+      console.log("DATA: " + data);
       if (data.paymentLink) {
         document.getElementById('paymentLink').href = data.paymentLink;
         document.getElementById('paymentLinkContainer').classList.remove('hidden');
